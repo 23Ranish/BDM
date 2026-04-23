@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Fleet | Black Diamond Motors</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Default fallback (important!) -->
+  <link rel="icon" href="img/BDM DARK.png">
+
+  <!-- Theme-aware icons (works on some browsers) --> 
+  <link rel="icon" href="img/BDM DARK.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="img/BDM LIGHT.png" media="(prefers-color-scheme: dark)">
+
+  <!-- iOS / mobile support -->
+  <link rel="apple-touch-icon" href="img/BDM LIGHT.png">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="mobile-menu-logo" onclick="toggleMenu()">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="why.html">Why Us</a></li>
+    <li><a href="fleet.html">Our Fleet</a></li>
+    <li><a href="book.html">Reserve</a></li>
+  </ul>
+  <div class="nav-center-logo desktop-logo">
+    <a href="index.html"><img src="img/BDM LOGO REVISED.png"></a>
+  </div>
+  <div class="nav-center-logo mobile-logo">
+    <a href="index.html"><img src="img/BDM LOGO REVISED.png"></a>
+  </div>
+  <a href="book.html" class="nav-book-btn">Reserve Now</a>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="why.html">Why Us</a>
+  <a href="fleet.html">Our Fleet</a>
+  <a href="book.html">Reserve</a>
+</div>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="page-reveal" style="padding-top:120px;"></div>
+<section class="page-reveal" style="background:var(--off-black);padding-top:60px;">
+
+<!-- FLEET SECTION -->
+  <div style="max-width:1300px;margin:0 auto;">
+    <div style="margin-bottom:64px;">
+      <p class="s-eye">Exclusive Collection</p>
+      <h2 class="s-title">Our <em>Fleet</em></h2>
+      <div class="divider"></div>
+      <p class="s-body">Each vehicle represents the pinnacle of automotive artistry. Select your preferred model and experience driving elevated.</p>
+    </div>
+    <div class="fleet-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;">
+
+      <!-- 1. Aston Martin DBX -->
+      <div class="fleet-card page-reveal" onclick="openModal('Aston Martin DBX','Exotic SUV','The Aston Martin DBX is a luxury SUV blending everyday practicality with exotic performance and signature Aston Martin elegance. Powered by a 542 HP engine, it accelerates 0–100 km/h in 4.3 seconds, delivering smooth, responsive performance in city and highway driving. It offers strong presence, refined handling, and impressive capability without compromise. Inside, a premium cabin with seating for five provides comfort, space, and craftsmanship, making it a versatile SUV for journeys.','563','4.8s','5','$1,200',['img/newdbx.jpg','img/newdbx2.jpg','img/newdbx3.jpg'],'New Arrival')">    
+        <div class="fleet-visual">
+          <div class="fleet-badge">New  Arrival</div>
+          <img src="img/newdbx.jpg"style="transform: scale(1); transform-origin: center; width:100%; height:100%; object-fit:cover; object-position:center 55%;"alt="Aston Martin DBX">
+        </div>
+        <div class="fleet-info">
+          <p class="fleet-class">Exotic SUV</p>
+          <h3 class="fleet-name">Aston Martin DBX</h3>
+          <p class="fleet-desc">The ultimate luxury SUV. The DBX combines breathtaking performance with the refinement and elegance Aston Martin is renowned for.</p>
+          <div class="fleet-specs">
+            <div class="fleet-spec"><strong>542</strong>HP</div>
+            <div class="fleet-spec"><strong>4.3s</strong>0–100</div>
+            <div class="fleet-spec"><strong>5</strong>Seats</div>
+          </div>
+          <div class="fleet-price"><span class="amount">$1,200</span><span class="period">/ day</span></div>
+          <div class="fleet-btn">View Details</div>
+        </div>
+      </div>
+
+      <!-- 2. Jaguar F-Type -->
+      <div class="fleet-card page-reveal" onclick="openModal('Jaguar F-Type','Sports Coupe',' The Jaguar F-Type is a true sports car icon, blending sculpted design with exhilarating performance and precision engineering for a thrilling driving experience. It delivers 444 horsepower and accelerates from 0–100 km/h in just 4.4 seconds, offering razor-sharp response and dynamic handling. With seating for two and a driver-focused cockpit, it is built purely for performance and connection to the road.','444','4.4s','2','$950',['img/fty2.jpg','img/fty3.jpg','img/fty4.jpg'],'Most Popular')">
+        <div class="fleet-visual">
+          <div class="fleet-badge">Most Popular</div>
+          <img src="img/fty2.jpg"style="transform: scale(1); transform-origin: center; width:100%; height:100%; object-fit:cover; object-position:center 85%;"alt="Jaguar F-Type">
+        </div>
+        <div class="fleet-info">
+          <p class="fleet-class">Sports Coupe</p>
+          <h3 class="fleet-name">Jaguar F-Type</h3>
+          <p class="fleet-desc">A true sports car icon. The F-Type delivers exhilarating performance wrapped in sculpted, head-turning bodywork, blending precision engineering with dynamic handling and thrilling driving experience.</p>
+          <div class="fleet-specs">
+            <div class="fleet-spec"><strong>444</strong>HP</div>
+            <div class="fleet-spec"><strong>4.4s</strong>0–100</div>
+            <div class="fleet-spec"><strong>2</strong>Seats</div>
+          </div>
+          <div class="fleet-price"><span class="amount">$950</span><span class="period">/ day</span></div>
+          <div class="fleet-btn">View Details</div>
+        </div>
+      </div>
+
+      <!-- 3. Jeep Wagoneer -->
+      <div class="fleet-card page-reveal" onclick="openModal('Jeep Wagoneer','Executive SUV','The Jeep Wagoneer is a full-size luxury SUV that combines commanding road presence with refined comfort and versatility. Blending American luxury with strong capability, it is designed for both daily driving and long journeys. Powered by 392 HP, it accelerates from 0–100 km/h in 5.1 seconds while maintaining smooth performance and stability. With seating for seven passengers, it offers generous space, premium comfort, and practicality for families or group travel.','392','5.1s','7','$750',['img/wag.jpg','img/wag2.jpg','img/wag3.jpg'],'')">
+        <div class="fleet-visual">
+          <img src="img/wag.jpg"style="transform: scale(1.2); transform-origin: center; width:100%; height:100%; object-fit:cover; object-position:center 35%;"alt="Jeep Wagoneer">
+        </div>
+        <div class="fleet-info">
+          <p class="fleet-class">Executive SUV</p>
+          <h3 class="fleet-name">Jeep Wagoneer</h3>
+          <p class="fleet-desc">Commanding presence meets refined comfort. The Wagoneer blends American luxury with impressive capability, space, and versatility for any occasion or journey.</p>
+          <div class="fleet-specs">
+            <div class="fleet-spec"><strong>392</strong>HP</div>
+            <div class="fleet-spec"><strong>5.1s</strong>0–100</div>
+            <div class="fleet-spec"><strong>7</strong>Seats</div>
+          </div>
+          <div class="fleet-price"><span class="amount">$750</span><span class="period">/ day</span></div>
+          <div class="fleet-btn">View Details</div>
+        </div>
+      </div>
+
+      <!-- 4. Audi SQ8 -->
+      <div class="fleet-card page-reveal" onclick="openModal('Audi SQ8','Exotic SUV','The Audi SQ8 is a high-performance luxury SUV that blends supercar-level speed with everyday practicality and refinement. Powered by 500 HP, it accelerates from 0–100 km/h in just 4.1 seconds, delivering thrilling yet controlled performance. Its sophisticated design hides a spacious, premium cabin with seating for five, making it ideal for both spirited driving and daily comfort. Combining power, precision, and versatility, it offers a refined driving experience in a bold, modern package.','500','4.1s','5','$650',['img/sq8.jpg','img/sq82.jpg','img/sq83.jpg'],'')">
+        <div class="fleet-visual">
+          <img src="img/sq8.jpg"style="transform: scale(1); transform-origin: center; width:100%; height:100%; object-fit:cover; object-position:center 45%;"alt="Audi SQ8">
+        </div>
+        <div class="fleet-info">
+          <p class="fleet-class">Exotic SUV</p>
+          <h3 class="fleet-name">Audi SQ8</h3>
+          <p class="fleet-desc">Where performance meets practicality. The SQ8 delivers supercar thrills in a sophisticated, spacious, and refined package built for everyday luxury.</p>
+          <div class="fleet-specs">
+            <div class="fleet-spec"><strong>500</strong>HP</div>
+            <div class="fleet-spec"><strong>4.1s</strong>0–100</div>
+            <div class="fleet-spec"><strong>5</strong>Seats</div>
+          </div>
+          <div class="fleet-price"><span class="amount">$650</span><span class="period">/ day</span></div>
+          <div class="fleet-btn">View Details</div>
+        </div>
+      </div>
+
+<!-- Coming Soon Vehicle -->
+<div class="fleet-card page-reveal" onclick="openModal('Coming Soon','New Arrival','Coming soon: A new addition to our fleet is on the way. Designed to deliver exceptional performance, refined luxury, and an unforgettable driving experience. Stay tuned.','','','','',['img/CS.png','img/CS.png','img/CS.png'],'')">
+  <div class="fleet-visual">
+    <img src="img/CS.png"style="transform: scale(1.3); transform-origin: center; width:100%; height:100%; object-fit:cover; object-position:center 25%;"alt="Coming Soon">
+  </div>
+  <div class="fleet-info">
+    <p class="fleet-class">New Arrival</p>
+    <h3 class="fleet-name">Coming Soon</h3>
+    <p class="fleet-desc">Coming soon: A new addition to our fleet is on the way. Designed to deliver exceptional performance, refined luxury, and an unforgettable driving experience. Stay tuned.</p>
+    <div class="fleet-specs">
+      <div class="fleet-spec"><strong>—</strong>HP</div>
+      <div class="fleet-spec"><strong>—</strong>0–100</div>
+      <div class="fleet-spec"><strong>—</strong>Seats</div>
+    </div>
+    <div class="fleet-price"><span class="amount">TBD</span><span class="period"></span></div>
+    <div class="fleet-btn">View Details</div>
+  </div>
+</div>
+
+      <!-- 6. Mercedes-Benz G-Wagon -->
+      <div class="fleet-card page-reveal" onclick="openModal('Mercedes-Benz G-Wagon','SUV','The Mercedes-Benz G-Class, commonly known as the G-Wagon, is an automotive icon that combines unmistakable presence with legendary off-road capability and uncompromising luxury. Powered by 416 HP, it accelerates from 0–100 km/h in 5.9 seconds while delivering confident, powerful performance on any terrain. Its bold, timeless design is matched with a refined interior offering seating for five and premium comfort throughout. Built to dominate both city streets and rugged landscapes, it represents prestige, strength, and versatility in one distinctive SUV.','577','4.5s','5','$850',['img/gwag.jpg','img/gwag2.jpg','img/gwag3.jpg'],'New Arrival')">
+        <div class="fleet-visual">
+          <img src="img/gwag.jpg"style="transform: scale(1); transform-origin: center; width:100%; height:100%; object-fit:cover; object-position:center 45%;"alt="Mercedes-Benz G-Wagon">
+        </div>
+        <div class="fleet-info">
+          <p class="fleet-class">SUV</p>
+          <h3 class="fleet-name">Mercedes-Benz G-Wagon</h3>
+          <p class="fleet-desc">An automotive icon. The G-Wagon commands every road with its unmistakable presence, legendary capability and uncompromising luxury.</p>
+          <div class="fleet-specs">
+            <div class="fleet-spec"><strong>416</strong>HP</div>
+            <div class="fleet-spec"><strong>5.9s</strong>0–100</div>
+            <div class="fleet-spec"><strong>5</strong>Seats</div>
+          </div>
+          <div class="fleet-price"><span class="amount">$850</span><span class="period">/ day</span></div>
+          <div class="fleet-btn">View Details</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- VEHICLE MODAL -->
+<div id="vehicleModal" class="vehicle-modal" onclick="handleModalClick(event)">
+  <div class="vehicle-modal-content">
+
+    <button class="modal-close" onclick="closeModal()">✕</button>
+
+    <div class="modal-grid">
+
+      <!-- LEFT: IMAGES -->
+      <div class="modal-images">
+        <div class="modal-main-wrap">
+          <img id="modalMainImg" src="" alt="" class="modal-main-img">
+        </div>
+        <div class="modal-thumbs" id="modalThumbs"></div>
+      </div>
+
+      <!-- RIGHT: INFO -->
+      <div class="modal-info">
+        <p class="modal-badge" id="modalBadge"></p>
+        <p class="modal-class" id="modalClass"></p>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-divider"></div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-specs" id="modalSpecs"></div>
+        <div class="modal-price" id="modalPrice"></div>
+        <a href="book.html" class="modal-reserve-btn">Reserve This Vehicle</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="bn">Black Diamond</div>
+      <div class="bt">Motors · Est. 2024</div>
+      <p>Purveyors of premium automotive experiences. Where prestige meets the open road.</p>
+    </div>
+    <div class="footer-col"><h4>Navigation</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="why.html">Why Choose Us</a></li>
+      <li><a href="fleet.html">Our Fleet</a></li>
+      <li><a href="book.html">Reserve</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Fleet</h4><ul>
+      <li><a href="fleet.html">Luxury SUVs</a></li>
+      <li><a href="fleet.html">Sports Coupés</a></li>
+      <li><a href="fleet.html">Executive SUVs</a></li>
+      <li><a href="fleet.html">Exotic Collection</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="tel:6479300890">+1 (647) 930-0890</a></li>
+      <li><a href="mailto:Blackdiamondmotorsca@gmail.com">Blackdiamondmotorsca@gmail.com</a></li>
+      <li><a href="#">Toronto, ON</a></li>
+      <li><a href="#">24/7 Concierge</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Black Diamond Motors. All rights reserved.</p>
+    <p><a href="legal.html" style="color:inherit;text-decoration:none;">Privacy Policy · Terms</a></p>
+  </div>
+</footer>
+
+<style>
+
+
+
+/* ── ROOT ── */
+:root {
+  --black: #0a0a0a;
+  --off-black: #111111;
+  --deep: #161616;
+  --white: #f5f3ef;
+  --white-dim: rgba(245,243,239,0.6);
+  --accent: rgba(255,255,255,0.9);
+  --border: rgba(245,243,239,0.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 300; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ── CURSOR ── */
+.cursor, .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 10001; transform: translate(-50%,-50%); display: none; }
+@media (pointer: fine) {
+  body { cursor: none; }
+  .cursor { display: block; width: 10px; height: 10px; border-radius: 50%; background: var(--white); mix-blend-mode: difference; }
+  .cursor-ring { display: block; width: 36px; height: 36px; border: 1px solid rgba(245,243,239,0.5); border-radius: 50%; transition: width 0.25s, height 0.25s, border-color 0.25s; }
+}
+
+/* ── QUOTE ── */
+.quote-banner {font-size: clamp(16px, 2vw, 22px);text-align: center;}
+@media (min-width: 768px) {.quote-banner {white-space: nowrap;}}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1001;
+  display: grid; grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 40px 60px;
+  background: linear-gradient(180deg,rgba(10,10,10,0.95) 100%,transparent 100%);
+  transition: transform 0.3s ease, padding 0.4s, background 0.4s;
+  border-bottom: 1px solid transparent;
+}
+nav.scrolled { padding: 40px 60px; border-bottom-color: var(--border); background: rgba(10,10,10,0.97); backdrop-filter: blur(20px); }
+nav.hide { transform: translateY(-100%); }
+.nav-links { display: flex; gap: 44px; list-style: none; justify-content: flex-start; }
+.nav-links a { font-size: 10px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--white-dim); text-decoration: none; transition: color 0.3s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.3s; }
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { width: 100%; }
+.nav-center-logo { display: flex; justify-content: center; align-items: center; }
+.nav-center-logo img { width: clamp(120px,20vw,250px); height: auto; }
+.nav-book-btn { justify-self: end; font-size: 9px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--black); background: var(--white); padding: 12px 28px; text-decoration: none; display: inline-block; transition: opacity 0.3s; }
+.nav-book-btn:hover { opacity: 0.85; }
+
+/* ── HAMBURGER ── */
+.mobile-menu-logo {display: none;cursor: pointer;z-index: 1002;position: relative;justify-self: start;}
+.hamburger {width: 28px;height: 18px;position: relative;}
+.hamburger span {position: absolute;left: 0;width: 100%;height: 2px;background: var(--white);transition: 0.3s ease;transform-origin: center;}
+
+/* better vertical spacing */
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 8px; }
+.hamburger span:nth-child(3) { top: 16px; }
+.hamburger.active span:nth-child(1) {top: 8px;transform: rotate(45deg);}
+.hamburger.active span:nth-child(2) {opacity: 0;}
+.hamburger.active span:nth-child(3) {top: 8px;transform: rotate(-45deg);}
+
+/* ── MOBILE MENU ── */
+.mobile-menu {position: fixed; inset: 0;background: rgba(10,10,10,0.98);backdrop-filter: blur(10px);display: flex; flex-direction: column;
+justify-content: center; align-items: center;gap: 36px;transform: translateY(-100%);transition: transform 0.45s ease;z-index: 1000;}
+.mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: 32px; letter-spacing: 0.15em; color: var(--white); text-decoration: none; }
+.mobile-menu.active { transform: translateY(0); }
+.mobile-logo { display: none; }
+
+/* ── HERO ── */
+#heroSection {position: relative; min-height: 100vh; display: flex;align-items: center; padding-top: 140px; padding-bottom: 60px;overflow: hidden;background: linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 40%,#0f0f0f 100%);}
+.hero-pattern { position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg,rgba(201,168,76,0.03) 0px,rgba(201,168,76,0.03) 1px,transparent 1px,transparent 60px), repeating-linear-gradient(-45deg,rgba(201,168,76,0.03) 0px,rgba(201,168,76,0.03) 1px,transparent 1px,transparent 60px); }
+.hero-diamond-bg { position: absolute; right: -5vw; top: 50%; transform: translateY(-50%); width: 55vw; height: 55vw; opacity: 0.06; animation: spin 60s linear infinite; }
+@keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
+.hero-car-area { position: absolute; right: 8%; top: 50%; transform: translateY(-40%); width: 55%; height: 70%; z-index: 2; overflow: hidden; }
+.hero-slider { position: absolute; inset: 0; }
+.slide {filter: brightness(1.05) contrast(1.08);position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: translateX(100%); transition: transform 0.8s ease, opacity 0.8s ease; z-index: 0; }
+.slide.active { opacity: 1; transform: translateX(0); z-index: 2; }
+.slide.exit { opacity: 0; transform: translateX(-100%); z-index: 1; }
+.mainhero-car-gradient {position: absolute;inset: 0;z-index: 3;pointer-events: none;
+background:
+    linear-gradient(
+      to bottom,
+      rgba(10,10,10,0.15) 0%,
+      rgba(10,10,10,0.25) 40%,
+      rgba(10,10,10,0.55) 100%
+    );
+  display: none;
+}
+.hero-content { position: relative; z-index: 3; max-width: 640px; padding: 0 clamp(24px,6vw,120px); }
+.hero-eyebrow { font-size: 9px; font-weight: 500; letter-spacing: 0.4em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; animation: reveal 1.4s 0.2s both; }
+.hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px,7vw,100px); font-weight: 300; line-height: 0.95; color: var(--white); margin-bottom: 28px; animation: reveal 1.4s 0.35s both; }
+.hero-title em { font-style: italic; }
+.hero-sub { font-size: 12px; font-weight: 300; letter-spacing: 0.1em; line-height: 2; color: var(--white-dim); max-width: 380px; margin-bottom: 44px; animation: reveal 1.4s 0.5s both; }
+.hero-ctas { display: flex; gap: 16px; align-items: center; animation: reveal 1.4s 0.65s both; }
+@keyframes reveal { from { opacity: 0; transform: translateY(60px); } to { opacity: 1; transform: none; } }
+
+/* ── BUTTONS ── */
+.btn-primary { font-size: 9px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--black); background: var(--white); padding: 16px 40px; text-decoration: none; display: inline-block; transition: opacity 0.3s; border: none; }
+.btn-primary:hover { opacity: 0.85; }
+.btn-ghost { font-size: 9px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--white); background: transparent; border: 1px solid var(--border); padding: 16px 40px; text-decoration: none; display: inline-block; transition: border-color 0.35s; }
+.btn-ghost:hover { border-color: var(--white); }
+
+/* ── STRIP ── */
+.strip-bar { background: var(--deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 20px 40px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: clamp(16px,4vw,60px); }
+.strip-bar span { font-size: 9px; letter-spacing: 0.35em; text-transform: uppercase; white-space: nowrap; color: var(--white-dim); }
+.strip-bar span:first-child { color: var(--white); }
+
+/* ── SECTIONS ── */
+.section-dark { background: var(--off-black); }
+.section-black { background: #000; }
+.section-deep { background: var(--deep); border-top: 1px solid var(--border); }
+section { padding: clamp(60px,7vw,120px) clamp(20px,5vw,80px); }
+.container { max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 48px; }
+.s-eye { font-size: 9px; font-weight: 500; letter-spacing: 0.45em; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+.s-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px,4vw,62px); font-weight: 300; line-height: 1.05; color: var(--white); margin-bottom: 20px; }
+.s-title em { font-style: italic; }
+.s-body { font-size: 12px; font-weight: 300; letter-spacing: 0.06em; line-height: 2.2; color: var(--white-dim); max-width: 520px; }
+.divider { width: 48px; height: 1px; background: var(--white); margin: 24px 0; }
+
+/* ── FLEET STUFF ── */
+.fleet-visual {position: relative;}
+.fleet-badge {position: absolute;top: 12px;left: 12px;font-size: 9px;letter-spacing: 0.2em;text-transform: uppercase;
+background: rgba(255,255,255,0.9);color: #000;padding: 6px 10px;z-index: 2;}
+/* ── GRIDS ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+
+/* ── STATS ── */
+.stat-block { background: var(--deep); border: 1px solid var(--border); padding: 28px 24px; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 300; color: var(--white); line-height: 1; }
+.stat-num span { font-size: 24px; }
+.stat-label { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--white); margin-top: 8px; }
+
+/* ── FLEET TEASER CARDS ── */
+.teaser-card { background: var(--deep); border: 1px solid var(--border); padding: 28px; text-align: center; cursor: pointer; transition: border-color 0.3s; }
+.teaser-card:hover { border-color: rgba(201,168,76,0.4); }
+.teaser-img { width: 100%; height: 160px; overflow: hidden; border: 1px solid rgba(201,168,76,0.5); margin-bottom: 16px; }
+.teaser-img img { width: 100%; height: 100%; object-fit: cover; }
+.teaser-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); margin-top: 6px; }
+
+/* ── TESTIMONIALS ── */
+.testimonial-card { background: var(--off-black); border: 1px solid var(--border); padding: 40px 32px; }
+.quote-mark { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: var(--white); opacity: 0.2; line-height: 1; margin-bottom: 16px; }
+.quote-text { font-size: 12px; line-height: 2; color: var(--white-dim); margin-bottom: 24px; font-style: italic; }
+.quote-author { border-top: 1px solid var(--border); padding-top: 16px; }
+.author-name { font-size: 11px; color: var(--white); }
+.author-title { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white-dim); margin-top: 4px; }
+.testimonial-card {display: none;}
+.testimonial-controls {display: flex;justify-content: center;gap: 14px;margin-top: 40px;}
+.testimonial-controls button {background: transparent;border: 1px solid var(--border);color: var(--white);font-size: 13px;padding: 10px 16px;cursor: pointer;
+transition: all 0.3s ease;}
+.testimonial-controls button:hover {border-color: var(--white);}
+
+
+/* ── QUOTE BANNER ── */
+.quote-section { padding: clamp(40px,5vw,80px) clamp(20px,5vw,60px); text-align: center; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.quote-banner { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px,3vw,40px); font-weight: 300; font-style: italic; color: var(--white); max-width: 800px; margin: 0 auto 16px; line-height: 1.5; }
+.quote-attribution { font-size: 9px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--white-dim); }
+
+/* ── FOOTER ── */
+footer { background: var(--off-black); border-top: 1px solid var(--border); padding: 80px 60px 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; max-width: 1200px; margin: 0 auto 60px; }
+.footer-brand .bn { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--white); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+.footer-brand .bt { font-size: 8px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--white-dim); margin-bottom: 20px; }
+.footer-brand p { font-size: 11px; line-height: 2; color: var(--white-dim); }
+.footer-col h4 { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--white); margin-bottom: 20px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 12px; }
+.footer-col ul li a { font-size: 11px; color: var(--white-dim); text-decoration: none; transition: color 0.3s; }
+.footer-col ul li a:hover { color: var(--white); }
+.footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 28px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.footer-bottom p { font-size: 10px; letter-spacing: 0.1em; color: var(--white-dim); }
+
+/* ── REVEAL ── */
+.page-reveal {opacity: 0;transform: translateY(40px);transition: opacity 0.9s ease, transform 0.9s ease;will-change: opacity, transform;}
+.page-reveal.show {opacity: 1;transform: translateY(0);}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── PAGE TOP (non-home pages) ── */
+.page-top { padding-top: 120px; }
+
+/* ══════════════════════════════
+   TABLET (max 1024px)
+══════════════════════════════ */
+@media (max-width: 1024px) {
+  nav { padding: 20px 32px; }
+  nav.scrolled { padding: 20px 32px; }
+  .hero-car-area { width: 50%; right: 3%; }
+  .grid-3 { grid-template-columns: repeat(2,1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+/* ══════════════════════════════
+   MOBILE (max 768px)
+══════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav { padding: 30px 20px; grid-template-columns: auto 1fr auto; }
+  nav.scrolled { padding: 30px 20px; }
+  .nav-links, .desktop-logo { display: none; }
+  .mobile-menu-logo { display: block; }
+  .mobile-logo {position: absolute;left: 50%;transform: translateX(-50%);display: flex;}
+  .mobile-logo img { width: 170px; }
+  .nav-book-btn {display: inline-block;justify-self: end;font-size: 7px;padding: 6px 10px;letter-spacing: 0.18em;}
+
+  /* HERO */
+  #heroSection {align-items: flex-end;padding-top: 100px;padding-bottom: 52px;min-height: 100svh;}
+  .hero-car-area {position: absolute;inset: 0;width: 100%;height: 100%;transform: none;top: 0;right: 0;opacity: 0.3;}
+  .mainhero-car-gradient {background:linear-gradient(180deg, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0) 40%),
+  linear-gradient(0deg, rgba(10,10,10,0.8) 0%, rgba(10,10,10,0.2) 70%);}
+  .hero-content { padding: 0 24px; max-width: 100%; z-index: 4; }
+  .hero-title { font-size: clamp(44px,12vw,64px); margin-bottom: 20px; }
+  .hero-sub { font-size: 11px; max-width: 100%; margin-bottom: 32px; }
+  .hero-ctas { flex-direction: column; gap: 12px; width: 100%; }
+  .btn-primary, .btn-ghost { width: 100%; text-align: center; padding: 16px 24px; }
+
+  /* SECTIONS */
+  section { padding: 52px 20px; }
+  .s-title { font-size: clamp(28px,8vw,44px); }
+  .section-header { margin-bottom: 32px; }
+
+  /* GRIDS */
+  .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 16px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+  .stat-block { padding: 20px 16px; }
+  .stat-num { font-size: 36px; }
+
+  /* FLEET TEASER */
+  .teaser-img { height: 200px; }
+
+  /* STRIP */
+  .strip-bar { padding: 16px 20px; gap: 16px; }
+  .strip-bar span { font-size: 8px; }
+
+  /* FOOTER */
+  footer { padding: 48px 20px 28px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+}
+
+/* ══════════════════════════════
+   SMALL MOBILE (max 390px)
+══════════════════════════════ */
+@media (max-width: 390px) {
+  .hero-title { font-size: 38px; }
+  .mobile-logo img { width: 130px; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .teaser-img { height: 160px; }
+}
+
+/* ══════════════════════════════
+   ULTRA WIDE
+══════════════════════════════ */
+@media (min-width: 1600px) {
+  .container { max-width: 1400px; }
+  .hero-content { max-width: 900px; }
+}
+
+
+/* ══════════════════════════════
+   VEHICLE MODAL
+══════════════════════════════ */
+
+/* BACKDROP — fixed to viewport, always centered */
+.vehicle-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(5,5,5,0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.vehicle-modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* MODAL BOX */
+.vehicle-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  max-height: 88vh;
+  background: #0f0f0f;
+  border: 1px solid rgba(245,243,239,0.15);
+  padding: 48px;
+  overflow-y: auto;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1), opacity 0.4s ease;
+}
+
+.vehicle-modal.active .vehicle-modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* CLOSE BUTTON */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+
+  /* NEW */
+  background: rgba(0,0,0,0.65); /* dark glass background */
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%; /* makes it a circle */
+
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.25s ease;
+  z-index: 20; /* ensure it's above images */
+}
+
+.modal-close:hover {
+  background: rgba(0,0,0,0.9);
+  border-color: #fff;
+}
+
+/* MODAL GRID */
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* IMAGE SIDE */
+.modal-images { display: flex; flex-direction: column; gap: 12px; }
+
+.modal-main-wrap {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: #0a0a0a;
+  border: 1px solid var(--border);
+}
+
+.modal-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.modal-thumbs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.modal-thumbs img {
+  width: 80px;
+  height: 56px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid transparent;
+  opacity: 0.5;
+  transition: opacity 0.3s, border-color 0.3s;
+}
+
+.modal-thumbs img:hover,
+.modal-thumbs img.active-thumb {
+  opacity: 1;
+  border-color: var(--white);
+}
+
+/* INFO SIDE */
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+}
+
+.modal-badge {
+  font-size: 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--white);
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+
+.modal-badge:empty { display: none; }
+
+.modal-class {
+  font-size: 9px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  margin-bottom: 12px;
+}
+
+.modal-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px,3vw,44px);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.modal-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--white);
+  margin-bottom: 20px;
+}
+
+.modal-desc {
+  font-size: 12px;
+  line-height: 2;
+  color: var(--white-dim);
+  margin-bottom: 28px;
+}
+
+.modal-specs {
+  display: flex;
+  gap: 28px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+}
+
+.modal-specs div {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--white-dim);
+}
+
+.modal-specs strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.modal-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+
+.modal-reserve-btn {
+  display: block;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--white);
+  padding: 18px 40px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.modal-reserve-btn:hover { opacity: 0.85; }
+
+/* MOBILE MODAL */
+@media (max-width: 768px) {
+  .vehicle-modal { padding: 0; align-items: flex-end; }
+
+  .vehicle-modal-content {
+    max-width: 100%;
+    max-height: 92dvh;
+    padding: 24px 20px 36px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 0;
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .modal-main-wrap { aspect-ratio: 16/9; }
+
+  .modal-thumbs img { width: 64px; height: 44px; }
+
+  .modal-specs { gap: 16px; }
+  .modal-specs strong { font-size: 22px; }
+  .modal-price { font-size: 32px; }
+  .modal-title { font-size: 28px; }
+}
+
+/* LOCK SCROLL WHEN MODAL OPEN */
+body.modal-open { overflow: hidden; }
+
+</style>
+
+<script>
+
+// NAV SCROLL HIDE
+let lastScroll = 0;
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  const cur = window.scrollY;
+  navbar.classList.toggle('hide', cur > lastScroll && cur > 80);
+  navbar.classList.toggle('scrolled', cur > 30);
+  lastScroll = cur;
+});
+
+// SCROLL REVEAL
+function initReveal() {
+  const els = document.querySelectorAll('.page-reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('show'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(el => obs.observe(el));
+}
+document.addEventListener('DOMContentLoaded', initReveal);
+
+// MOBILE MENU
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('active');
+  document.querySelector('.hamburger').classList.toggle('active');
+}
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.remove('active');
+    document.querySelector('.hamburger').classList.remove('active');
+  });
+});
+
+// CUSTOM CURSOR
+if (window.matchMedia('(pointer: fine)').matches) {
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+  });
+  (function animRing() {
+    rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  })();
+  document.addEventListener('mouseover', e => {
+    if (e.target.closest('a,button,.fleet-card,.modal-close,.modal-thumbs img')) {
+      ring.style.width = '56px'; ring.style.height = '56px';
+      ring.style.borderColor = 'rgba(255,255,255,0.8)';
+    }
+  });
+  document.addEventListener('mouseout', e => {
+    if (e.target.closest('a,button,.fleet-card,.modal-close,.modal-thumbs img')) {
+      ring.style.width = '36px'; ring.style.height = '36px';
+      ring.style.borderColor = 'rgba(245,243,239,0.5)';
+    }
+  });
+}
+
+// MODAL
+const modal = document.getElementById('vehicleModal');
+
+function openModal(title, carClass, desc, hp, acceleration, seats, price, images, badge) {
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalClass').innerText = carClass;
+  document.getElementById('modalDesc').innerText = desc;
+  document.getElementById('modalBadge').innerText = badge;
+  document.getElementById('modalPrice').innerText = price + ' / day';
+
+  document.getElementById('modalSpecs').innerHTML = `
+    <div><strong>${hp}</strong>Horsepower</div>
+    <div><strong>${acceleration}</strong>0–100 km/h</div>
+    <div><strong>${seats}</strong>Seats</div>
+  `;
+
+  const mainImg = document.getElementById('modalMainImg');
+  mainImg.src = images[0];
+
+  const thumbs = document.getElementById('modalThumbs');
+  thumbs.innerHTML = '';
+  images.forEach((src, i) => {
+    const img = document.createElement('img');
+    img.src = src;
+    if (i === 0) img.classList.add('active-thumb');
+    img.onclick = () => {
+      mainImg.style.opacity = '0';
+      setTimeout(() => { mainImg.src = src; mainImg.style.opacity = '1'; }, 200);
+      thumbs.querySelectorAll('img').forEach(t => t.classList.remove('active-thumb'));
+      img.classList.add('active-thumb');
+    };
+    thumbs.appendChild(img);
+  });
+
+  modal.classList.add('active');
+  document.body.classList.add('modal-open');
+}
+
+function closeModal() {
+  modal.classList.remove('active');
+  document.body.classList.remove('modal-open');
+}
+
+function handleModalClick(e) {
+  if (e.target === modal) closeModal();
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+
+</script>
+
+</body>
+</html>
