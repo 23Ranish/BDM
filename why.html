@@ -62,7 +62,10 @@
 <div class="cursor-ring" id="cursorRing"></div>
 
 
-<div style="padding-top:90px;"></div>
+<div style="padding-top:45px;"></div>
+
+<section class="page-reveal" style="background:var(--black); padding-top:45px;">
+
 
 <!-- ════════ WHY US ════════ -->
   <section style="background:var(--black);text-align:center;">
@@ -393,9 +396,10 @@ footer { background: var(--off-black); border-top: 1px solid var(--border); padd
 .footer-bottom p { font-size: 10px; letter-spacing: 0.1em; color: var(--white-dim); }
 
 /* ── REVEAL ── */
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
+/* ── REVEAL ── */
+.page-reveal {opacity: 0;transform: translateY(40px);transition: opacity 0.9s ease, transform 0.9s ease;will-change: opacity, transform;}
+.page-reveal.show {opacity: 1;transform: translateY(0);}
 .reveal.visible { opacity: 1; transform: none; }
-
 /* ── PAGE TOP (non-home pages) ── */
 .page-top { padding-top: 120px; }
 
@@ -583,6 +587,18 @@ if (window.matchMedia('(pointer: fine)').matches) {
     }
   });
 }
+
+// SCROLL REVEAL
+function initReveal() {
+  const els = document.querySelectorAll('.page-reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('show'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(el => obs.observe(el));
+}
+document.addEventListener('DOMContentLoaded', initReveal);
 </script>
 
 </body>
